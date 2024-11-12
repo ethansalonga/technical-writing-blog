@@ -23,18 +23,6 @@ const textCase = 'uppercase'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style is:global define:vars={{ skillColor, fontWeight, textCase }}>
-    h1 {
-      color: purple;
-      font-size: 4rem;
-    }
-    .skill {
-      color: var(--skillColor);
-      font-weight: bold;
-      font-weight: var(--fontWeight);
-      text-transform: var(--textCase);
-    }
-  </style>
   <h2>... and my new Astro site!</h2>
   <p>
     I am working through Astro's introductory tutorial. This is the second page
@@ -72,3 +60,16 @@ const textCase = 'uppercase'
     )
   }
 </BaseLayout>
+
+<style is:global define:vars={{ skillColor, fontWeight, textCase }}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+  .skill {
+    color: var(--skillColor);
+    font-weight: bold;
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
