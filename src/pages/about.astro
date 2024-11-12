@@ -1,26 +1,27 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-import "../styles/global.css"
+import BaseLayout from '../layouts/BaseLayout.astro'
+import '../styles/global.css'
 
-const pageTitle = "About Me"
+const pageTitle = 'About Me'
 
 const identity = {
-  firstName: "Ethan",
-  country: "Salonga",
-  occupation: "Technical Writer",
-  hobbies: ["reading", "coding", "gaming"],
+  firstName: 'Ethan',
+  country: 'Salonga',
+  occupation: 'Technical Writer',
+  hobbies: ['reading', 'coding', 'gaming'],
 }
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs']
 
 const happy = true
 const finished = false
 const goal = 3
 
-const skillColor = "navy"
-const fontWeight = "bold"
-const textCase = "uppercase"
+const skillColor = 'navy'
+const fontWeight = 'bold'
+const textCase = 'uppercase'
 ---
+
 <BaseLayout pageTitle={pageTitle}>
   <style is:global define:vars={{ skillColor, fontWeight, textCase }}>
     h1 {
@@ -51,7 +52,7 @@ const textCase = "uppercase"
     </li>
     {
       identity.hobbies.length >= 2 && (
-        <li class="skill">
+        <li class='skill'>
           Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
         </li>
       )
